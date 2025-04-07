@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="styles/normalize-fwd.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Comfortaa:wght@300..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap" rel="stylesheet">
+    <script src="scripts/game.js" defer></script>
+
+</head>
+<body>
+    <div id="start-game-container">
+        <div class="start-game-output">
+            <div class="game-name">
+                <h2>MATCHING GAME</h2>
+            </div>
+            <button id="start-game-btn">
+                <span class="start-game-ouput">START GAME</span>
+            </button>
+        </div>
+    </div>
+
+   <div class="game-screen-container" id="game-screen-container">
+        <div class="scores-bar">
+            <h2>MATCHING GAME</h2>
+            <div class="timer-display">
+                <span>Time:</span>
+                <span class="timer-output">00:00</span>
+            </div>
+        </div>
+        <div class="cards-container" id="cards-container">
+            <div class="single-card">
+                <div class="card-cover">
+                    <img src="images/img-cover.png" alt="img-cover">
+                </div>
+                <div class="card-img">
+                    <img src="images/white-flowers.png" alt="white-pink-flowers">
+                </div>
+            </div>
+            <div class="single-card">
+                <div class="card-cover">
+                    <img src="images/img-cover.png" alt="img-cover">
+                </div>
+                <div class="card-img">
+                    <img src="images/blue-flowers.png" alt="blue-flowers">
+                </div>
+            </div>
+            <div class="single-card">
+                <div class="card-cover">
+                    <img src="images/img-cover.png" alt="img-cover">
+                </div>
+                <div class="card-img">
+                    <img src="images/light-blue-flowers.png" alt="light-blue-flowers">
+                </div>
+            </div>
+            <div class="single-card">
+                <div class="card-cover">
+                    <img src="images/img-cover.png" alt="img-cover">
+                </div>
+                <div class="card-img">
+                    <img src="images/pink-flowers.png" alt="pink-flowers">
+                </div>
+            </div>
+            <div class="single-card">
+                <div class="card-cover">
+                    <img src="images/img-cover.png" alt="img-cover">
+                </div>
+                <div class="card-img">
+                    <img src="images/red-flowers.png" alt="red-flowers">
+                </div>
+            </div>
+            <div class="single-card">
+                <div class="card-cover">
+                    <img src="images/img-cover.png" alt="img-cover">
+                </div>
+                <div class="card-img">
+                    <img src="images/purple-flowers.png" alt="purple-flowers">
+                </div>
+            </div>
+            <!-- first -->
+            <div class="single-card"> 
+                <div class="card-cover">
+                    <img src="images/img-cover.png" alt="img-cover">
+                </div>
+                <div class="card-img">
+                    <img src="images/white-flowers.png" alt="white-pink-flowers">
+                </div>
+            </div>
+            <div class="single-card">
+                <div class="card-cover">
+                    <img src="images/img-cover.png" alt="img-cover">
+                </div>
+                <div class="card-img">
+                    <img src="images/blue-flowers.png" alt="blue-flowers">
+                </div>
+            </div>
+            <div class="single-card">
+                <div class="card-cover">
+                    <img src="images/img-cover.png" alt="img-cover">
+                </div>
+                <div class="card-img">
+                    <img src="images/light-blue-flowers.png" alt="light-blue-flowers">
+                </div>
+            </div>
+            <div class="single-card">
+                <div class="card-cover">
+                    <img src="images/img-cover.png" alt="img-cover">
+                </div>
+                <div class="card-img">
+                    <img src="images/pink-flowers.png" alt="pink-flowers">
+                </div>
+            </div>
+            <div class="single-card">
+                <div class="card-cover">
+                    <img src="images/img-cover.png" alt="img-cover">
+                </div>
+                <div class="card-img">
+                    <img src="images/red-flowers.png" alt="red-flowers">
+                </div>
+            </div>
+            <div class="single-card">
+                <div class="card-cover">
+                    <img src="images/img-cover.png" alt="img-cover">
+                </div>
+                <div class="card-img">
+                    <img src="images/purple-flowers.png" alt="purple-flowers">
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="restart-quit-btn">
+            <button class="quit-game-btn" id="quit-game-btn">
+                <span>QUIT GAME</span>
+            </button>
+            <button class="restart-btn" id="restart-btn">
+                <span>RESTART GAME</span>
+            </button>
+        </div>
+        
+    </div>
+    
+    <div class="end-game-pop-up" id="end-game-pop-up">
+        <div class="end-game-pop-up-container">
+            <h2>Congratulations! You won!</h2>
+            <div class="restart-quit-btn">
+                <button class="quit-game-btn" id="quit-game-btn-pop">
+                    <span>QUIT GAME</span>
+                </button>
+                <button class="restart-btn" id="restart-btn-pop">
+                    <span>RESTART GAME</span>
+                </button>
+            </div>
+        </div>
+    </div>
+  
+</body>
+
+</html>

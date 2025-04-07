@@ -1,0 +1,241 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+html, body {
+    height: 100%; 
+    margin: 0; 
+}
+
+body {
+    font-family: "Questrial", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    color: #ffe6d0;
+	margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../images/flower-train.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 2rem;
+	text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.timer span,
+p {
+    font-size: 1.5rem;
+}
+
+/* Elements
+--------------------------------------------- */
+
+
+/* Links
+--------------------------------------------- */
+#restart-btn-pop:hover,
+#quit-game-btn-pop:hover,
+#quit-game-btn:hover,
+#restart-btn:hover,
+#start-game-btn:hover, 
+#game-screen-container button:hover {
+    background-color: rgb(160, 100, 20);
+}
+
+#restart-btn-pop:active,
+#quit-game-btn-pop:active,
+#quit-game-btn:active,
+#restart-btn:active,
+#start-game-btn:active, 
+#game-screen-container button:active {
+    background-color: rgb(110, 60, 15);
+}
+
+#restart-btn-pop,
+#quit-game-btn-pop,
+#quit-game-btn,
+#restart-btn,
+#start-game-btn {
+    padding: .5rem;
+    border-radius: .3rem;
+    background-color: rgb(137, 84, 13);
+    border-style: none;
+    color: #debe9f;
+    cursor: pointer;
+}
+
+.start-game-ouput {
+    color: #debe9f;
+}
+
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Header
+--------------------------------------------- */
+.end-game-pop-up,
+#start-game-container {
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    padding: 1rem;
+    width: fit-content;
+    height: fit-content;
+    left: 50%;
+    top: 50%;
+    animation: float 3s ease-in-out infinite;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(.3rem); 
+    border-radius: 1rem;
+}
+
+/* Main
+--------------------------------------------- */
+#game-screen-container {
+    display: none;
+    background-color: rgba(254, 213, 156, 0.255);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+
+.restart-quit-btn,
+.scores-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.scores-bar {
+    justify-content: space-around;
+}
+
+.timer-display {
+    background-color: #c3792f;
+    padding: .3rem;
+    border-radius: .3rem;
+}
+
+
+.cards-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.single-card {
+    position: relative;
+    width: 100px;
+    height: 150px;
+    perspective: 1000px;
+}
+
+.card-cover, 
+.card-img {
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    border-radius: 1rem;
+}
+
+.card-cover {
+    z-index: 2;
+    transform: rotateY(0deg);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card-cover img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    border-radius: 1rem;
+}
+
+.card-img {
+    transform: rotateY(180deg);
+    background-color: rgba(254, 213, 156, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img img {
+    width: 80%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.card-flipped .card-cover {
+    transform: rotateY(180deg);
+}
+
+.card-flipped .card-img {
+    transform: rotateY(0deg);
+}
+
+.restart-quit-btn {
+    margin: 1.5rem;
+}
+
+.end-game-pop-up {
+    display: none;
+}
+
+.end-game-btn-container {
+    gap: 2rem;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(.5rem);
+    }
+}
